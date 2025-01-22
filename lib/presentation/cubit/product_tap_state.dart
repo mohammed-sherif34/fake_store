@@ -1,3 +1,4 @@
+import 'package:fake_store/data/models/product_model/products_model.dart';
 
 abstract class ProductTapState {}
 
@@ -11,12 +12,9 @@ class ProductTapFailure extends ProductTapState {
 }
 
 class ProductTapSuccess extends ProductTapState {
-  ProductTapSuccess(
-    //required this.productList
-  );
+  ProductTapSuccess({required this.productList});
 
-  get productList => null;
- // List<Product> productList;
+  ProductsModel productList;
 }
 
 final class FavouriteSuccessState extends ProductTapState {}

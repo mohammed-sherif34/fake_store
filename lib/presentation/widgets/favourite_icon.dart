@@ -1,6 +1,7 @@
-
 import 'package:fake_store/core/assets_manager.dart';
 import 'package:fake_store/core/color_manager.dart';
+import 'package:fake_store/core/di/di.dart';
+import 'package:fake_store/data/models/product_model/products_model.dart';
 import 'package:fake_store/presentation/cubit/product_tap_cubit.dart';
 import 'package:fake_store/presentation/cubit/product_tap_state.dart';
 import 'package:flutter/material.dart';
@@ -10,17 +11,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class FavouriteIcon extends StatefulWidget {
   const FavouriteIcon({
     super.key,
-    //required this.product,
+    required this.product,
   });
-  //final Product product;
+  final Product product;
   @override
   State<FavouriteIcon> createState() => _FavouriteIconState();
 }
 
 class _FavouriteIconState extends State<FavouriteIcon> {
   bool activeCheck = false;
-  //final String productId;
- // var viewModel = getIt.get<ProductTapCubit>();
+  var viewModel = getIt.get<ProductTapCubit>();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -40,14 +40,11 @@ class _FavouriteIconState extends State<FavouriteIcon> {
       ),
       child: InkWell(
         onTap: () {
-         /* activeCheck == false
-              ? viewModel.addProductToFavourite(productId: widget.product.id)
-              : viewModel.removeProductFromFavourite(
-                  productId: widget.product.id);
-          activeCheck = !activeCheck;*/
+          setState(() {});
+          activeCheck = !activeCheck;
         },
         child: BlocBuilder<ProductTapCubit, ProductTapState>(
-         // bloc: viewModel,
+          bloc: viewModel,
           builder: (context, state) {
             return ImageIcon(
               color: AppColors.primaryColor,
