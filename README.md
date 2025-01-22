@@ -35,7 +35,7 @@ lib/
 ## Screenshot
 
 ### Products View
-![Image](https://github.com/user-attachments/assets/84ffc1e5-e1c2-4a27-8c49-9d89e645ce03)
+<img src="https://github.com/user-attachments/assets/84ffc1e5-e1c2-4a27-8c49-9d89e645ce03" alt="Image" width="430" height="932" />
 
 
 
