@@ -1,16 +1,48 @@
-# fake_store
+# Products View Task Documentation
 
-A new Flutter project.
+## Overview
 
-## Getting Started
+This task implements a **Products View** using **Flutter**. The task includes a list of products displayed in a grid format, with features like product information, reviews, and user interactions. It follows a clean architecture approach, leveraging **Cubit** for state management, **Repository** for data fetching, and a modular folder structure for scalability.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Folder Structure
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The folder structure is designed to organize the application into core functionalities, making it maintainable and easy to navigate.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```text
+lib/
+├── core/
+│   ├── api/                        # API-related utilities
+│   ├── di/                         # Dependency Injection setup
+│   ├── failures/                   # Error handling utilities
+│   ├── app_theme.dart              # Application theme configuration
+│   ├── assets_manager.dart         # Asset paths management
+│   ├── color_manager.dart          # Color palette management
+│   ├── constant_double_values.dart # Constants for double values
+│   ├── font_manager.dart           # Font style and size management
+│   └── snackbar_utils.dart         # Snackbar utility functions
+├── data/
+│   ├── models/                     # Models for the application
+│   └── repo/                       # Repository classes for data handling
+├── presentation/
+│   ├── cubit/                      # State management (Cubit and states)
+│   ├── view/                       # UI components
+│   └── widgets/                    # Reusable UI components
+└── main.dart                       # Entry point of the application
+```
+
+## Screenshot
+
+### Products View
+![Image](https://github.com/user-attachments/assets/84ffc1e5-e1c2-4a27-8c49-9d89e645ce03)
+
+
+
+## Features
+
+1. **Grid View**: Displays products in a responsive grid layout.
+2. **State Management**: Ensures smooth data loading and updates with Cubit.
+3. **Reusable Architecture**: Clean separation of concerns using Repository and Cubit.
+
+
